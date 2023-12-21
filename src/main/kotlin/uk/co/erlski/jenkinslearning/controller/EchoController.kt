@@ -15,7 +15,7 @@ class EchoController {
     fun echo(
         @RequestBody input: EchoInputBody
     ): ResponseEntity<EchoResponseBody> {
-        val message = EchoResponseBody(input.input)
+        val message = EchoResponseBody(input.input + input.name)
         return ResponseEntity(
             message, HttpStatus.OK
         )
