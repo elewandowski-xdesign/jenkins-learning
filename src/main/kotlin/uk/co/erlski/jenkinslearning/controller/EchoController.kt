@@ -16,9 +16,10 @@ class EchoController {
         @RequestBody input: EchoInputBody
     ): ResponseEntity<EchoResponseBody> {
         val message = EchoResponseBody(input.input + input.name)
+        System.err.println(message)
         return ResponseEntity(
             message, HttpStatus.OK
         )
-    }//COMMENT
+    }
 
 }
